@@ -10,7 +10,8 @@
 #import <WebKit/WebKit.h>
 #import "UIImageView+WebCache.h"
 
-#define nURLNews        @"http://doradosfc.com.mx/noticias-del-club.html?page=1"
+//#define nURLNews        @"http://doradosfc.com.mx/noticias-del-club.html?page=1"
+#define nURLNews        @"http://blog.runkeeper.com/category/lifestyle/"
 
 //Debug
 #define nDebugEnable        1

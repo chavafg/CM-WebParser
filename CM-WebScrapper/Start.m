@@ -39,16 +39,16 @@
     NSString *stCurrentURL      = self.webNews.request.URL.absoluteString;
     print(NSLog(@"stCurrentURL %@", stCurrentURL))
         
-    NSString *count = [self.webNews stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('listados').length;"];
+    NSString *count = [self.webNews stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('entry-header').length;"];
     print(NSLog(@"count %@", count))
         
-    NSString *stClass       = [self.webNews stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByClassName('listados')[0].innerHTML;"]];
+    NSString *stClass       = [self.webNews stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByClassName('entry-header')[0].innerHTML;"]];
     print(NSLog(@"stClassFinish %@", stClass))
         
-    NSString *stClassHeader = [self.webNews stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByClassName('listados')[0].children[0].innerText;"]];
+    NSString *stClassHeader = [self.webNews stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByClassName('entry-title')[0].children[0].innerText;"]];
     print(NSLog(@"stClassHeader %@", stClassHeader))
         
-    NSString *stClassImage  = [self.webNews stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByClassName('imagen')[0].children[0].getAttribute('src');"]];
+    NSString *stClassImage  = [self.webNews stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByClassName('post-thumb')[0].children[0].getAttribute('src');"]];
     print(NSLog(@"stClassImage %@", stClassImage))
         
     NSURL *url                      = [NSURL URLWithString:stClassImage];
